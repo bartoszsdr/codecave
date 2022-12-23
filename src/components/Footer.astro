@@ -1,0 +1,38 @@
+---
+import icon from '../images/github.svg'
+---
+
+<footer class='footer'>
+	<div>
+		<ul class='footer__links'>
+			<li class='footer__link'>
+				<a href='https://github.com/bartoszsdr/' aria-label='GitHub Link' rel='noopener noreferrer' target='_blank'
+					><img src={icon} alt='GitHub Icon' />
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class='footer__copy'><a href='#'>designed & developed by codecave</a></div>
+</footer>
+
+<style lang='scss'>
+	.footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 80px;
+		&__links {
+			// display: flex;
+		}
+		&__link {
+			margin: 1rem;
+			img {
+				height: 20px;
+			}
+		}
+		&__copy {
+			font-size: 0.8rem;
+		}
+	}
+</style>

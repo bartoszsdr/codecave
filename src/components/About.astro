@@ -1,0 +1,64 @@
+---
+// import '../styles/about.scss'
+---
+
+<section id='about' class='about'>
+	<div class='section-heading'>
+		<h2><span class='code'>01.</span> About Me</h2>
+	</div>
+	<div class='about__content'>
+		<p>
+			Hello! My name is Bartosz and I enjoy creating things that live on the Internet. My interest in web development
+			started back in 2016 when I decided to try creating a website for my friend using custom WordPress themes — turns
+			out meanwhile I learned a lot about HTML & CSS!
+		</p>
+		<p>
+			Fast-forward to today, and I've had the privilege of working with a variety of clients. My main focus these days
+			is building accessible and responsive websites.
+		</p>
+		<p>Here are a few technologies I've been working with recently:</p>
+		<ul class='about__list code'>
+			<li>JavaScript (ES6+)</li>
+			<li>React</li>
+			<li>HTML5</li>
+			<li>CSS3</li>
+			<li>TypeScript</li>
+			<li>Firebase</li>
+		</ul>
+	</div>
+</section>
+
+<style lang='scss'>
+	.about {
+		min-height: 70vh;
+		height: 70vh;
+		&__content {
+			margin-top: 2rem;
+			padding: 0 1rem;
+			color: #8892b0;
+			p {
+				margin-bottom: 1rem;
+				line-height: 1.4;
+				font-size: 1.4rem;
+			}
+		}
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(140px, 200px));
+			gap: 0px 10px;
+			margin-top: 2rem;
+			font-size: 1.2rem;
+
+			li {
+				margin-bottom: 1.4rem;
+			}
+
+			li::before {
+				content: '>';
+				margin-right: 0.8rem;
+				color: #008afb;
+				font-weight: bold;
+			}
+		}
+	}
+</style>

@@ -4,12 +4,7 @@
 
 # Tools
 
-- [React](https://reactjs.org)
-- [React Router](https://reactrouter.com/en/main)
-- [React Hook Form](https://react-hook-form.com)
-- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [Fake Store API](https://fakestoreapi.com)
-- [React Icons](https://react-icons.github.io/react-icons)
+- [Astro](https://astro.build)
 
 # Description
 

@@ -1,81 +1,91 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import Wrapper from '../layouts/Wrapper.astro'
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+import About from '../components/About.astro'
+
+import Footer from '../components/Footer.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title='Codecave'>
+	<Header />
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+		<Hero />
+		<About />
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+		<section id='experience' class='experience'>
+			<div class='section-heading'>
+				<h2><span>02.</span> Where I've Worked</h2>
+			</div>
+			<div class='experience-content'>
+				<div class='tablist'>
+					<button><span>Upstatement</span></button>
+					<button><span>Scout</span></button>
+				</div>
+				<div class='jobs'>
+					<div class='panel-0'>
+						<h3>Engineer <span>&nbsp;@&nbsp; <a href='#'>Upstatement</a></span></h3>
+						<p></p>
+						<div>
+							<ul>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<div class='panel-1'></div>
+					<div class='panel-2'></div>
+				</div>
+			</div>
+		</section>
+
+		<section id='projects' class='projects'>
+			<div class='section-heading'>
+				<h2><span>03.</span> Some Things I've Built</h2>
+			</div>
+			<ul>
+				<li>
+					<div class='project__content'>
+						<div>
+							<p>Featured Project</p>
+							<h3>Justashop App</h3>
+							<div><p>E-commerce app using Fake Store API and React Hook Form with Firebase Authentication.</p></div>
+							<ul>
+								<li>React</li>
+								<li>JavaScript</li>
+							</ul>
+							<div>
+								<a
+									href='https://github.com/bartoszsdr/justashop-app'
+									aria-label='GitHub Link'
+									rel='noopener noreferrer'
+									target='_blank'>GitHub</a
+								>
+								<a
+									href='https://justashop.netlify.app/'
+									aria-label='LiveView Link'
+									rel='noopener noreferrer'
+									target='_blank'>Link</a
+								>
+							</div>
+						</div>
+					</div>
+					<div><a href='#'>Image</a></div>
+				</li>
+			</ul>
+		</section>
+
+		<section id='contact' class='contact'>
+			<div class='section-heading'>
+				<h2><span>04.</span> Get in Touch</h2>
+			</div>
+			<p>
+				I'm looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say
+				hi, I'll try my best to get back to you!
+			</p>
+			<a href='mailto:bartoszsdr@gmail.com' rel='noopener noreferrer' target='_blank'>Say Hello</a>
+		</section>
+	</main>
+	<Footer />
+</Layout>
