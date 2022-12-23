@@ -1,0 +1,143 @@
+<section id='projects' class='projects'>
+	<div class='section-heading'>
+		<h2><span>03.</span> Some Things I've Built</h2>
+	</div>
+	<ul class='projects__list'>
+		<li class='projects_item'>
+			<div class='projects__cards'>
+				<div class='projects__card'>
+					<p class='projects__featured code'>Featured Project</p>
+					<h3 class='projects__title'>
+						<a
+							href='https://github.com/bartoszsdr/justashop-app'
+							aria-label='GitHub link'
+							rel='noopener noreferrer'
+							target='_blank'>Justashop App</a
+						>
+					</h3>
+					<div>
+						<p class='projects__description'>
+							A web e-commerce app using Fake Store API and React Hook Form with Firebase Authentication.
+						</p>
+					</div>
+					<ul class='projects__technology code'>
+						<li>React</li>
+						<li>JavaScript</li>
+					</ul>
+					<div class='projects__links'>
+						<a
+							href='https://github.com/bartoszsdr/justashop-app'
+							aria-label='GitHub link'
+							rel='noopener noreferrer'
+							target='_blank'
+							><svg
+								xmlns='http://www.w3.org/2000/svg'
+								width='24'
+								height='24'
+								viewBox='0 0 24 24'
+								fill='none'
+								stroke='#fff'
+								stroke-width='2'
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								class='feather feather-github'
+								><path
+									d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'
+								></path>
+							</svg>
+						</a>
+						<a
+							href='https://justashop.netlify.app/'
+							aria-label='Live view link'
+							rel='noopener noreferrer'
+							target='_blank'
+							><svg
+								xmlns='http://www.w3.org/2000/svg'
+								width='24'
+								height='24'
+								viewBox='0 0 24 24'
+								fill='none'
+								stroke='#fff'
+								stroke-width='2'
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								class='feather feather-external-link'
+								><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'></path><polyline
+									points='15 3 21 3 21 9'></polyline><line x1='10' y1='14' x2='21' y2='3'></line>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<style lang='scss'>
+	.projects {
+		padding: 5rem 0;
+		&__list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		&__cards {
+			margin-top: 2rem;
+			padding: 2rem;
+			background-color: #30363d;
+			box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 1);
+			border-radius: 5px;
+		}
+		&__featured {
+			margin-bottom: 0.4rem;
+			color: #008afb;
+			font-size: 1.2rem;
+		}
+		&__title {
+			margin-bottom: 2rem;
+			font-size: 2rem;
+			a {
+				transition: color 0.2s;
+			}
+			a:hover {
+				color: #008afb;
+			}
+		}
+		&__description {
+			margin-bottom: 2rem;
+			font-size: 1.4rem;
+			line-height: 1.4;
+		}
+		&__technology {
+			display: flex;
+			margin-bottom: 2rem;
+			font-size: 1.2rem;
+			li {
+				margin-right: 1rem;
+			}
+		}
+		&__links {
+			svg {
+				transition: stroke 0.1s;
+			}
+			a {
+				margin-right: 1rem;
+
+				&:hover {
+					svg {
+						stroke: #008afb;
+					}
+				}
+			}
+			svg {
+				height: 19px;
+			}
+		}
+		&__links a:last-child {
+			svg {
+				height: 21px;
+			}
+		}
+	}
+</style>
