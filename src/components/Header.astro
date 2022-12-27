@@ -177,6 +177,7 @@ import logo from '../images/logo.png'
 
 	@media (min-width: 768px) {
 		.nav {
+			height: 100px;
 			&__logo {
 				height: 70px;
 			}
@@ -188,8 +189,13 @@ import logo from '../images/logo.png'
 				z-index: 0;
 				transform: none;
 			}
+			&__item {
+				a {
+					padding: 0.5rem;
+					font-size: 1.3rem;
+				}
+			}
 		}
-
 		.hamburger {
 			display: none;
 		}
