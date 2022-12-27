@@ -1,0 +1,155 @@
+<section id='experience' class='experience'>
+	<div class='section-heading'>
+		<h2><span>02.</span> Where I've Worked</h2>
+	</div>
+	<div class='tabs'>
+		<!-- <div class='tablist code'> -->
+		<div class='tabs__controls code'>
+			<button class='tabs__btn active' data-id='tab-0'>Codecave</button>
+			<button class='tabs__btn' data-id='tab-1'>Eko-Steel Trade</button>
+		</div>
+
+		<div class='tabs__content'>
+			<div class='tabs__tab active' id='tab-0'>
+				<h3>Web Developer <span>&nbsp;@&nbsp;<a href='#'>Codecave</a></span></h3>
+				<p class='tabs__range code'>Oct 2021 - Present</p>
+				<div class='tabs__duties'>
+					<ul>
+						<li>Write high standard and efficient code by using web development best practices.</li>
+						<li>Handle every aspect of the process of a website's creation from layout to full functionality.</li>
+						<li>Meet with, discuss, provide advice and help clients achieve their vision.</li>
+						<li>Quality-test and troubleshoot the website in various browsers.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class='tabs__tab' id='tab-1'>
+				<h3>IT Specialist <span>&nbsp;@&nbsp;<a href='#'>Eko-Steel Trade</a></span></h3>
+				<p class='tabs__range code'>Jul 2021 - Sep 2021</p>
+				<div class='tabs__duties'>
+					<ul>
+						<li>Responsible for maintenance, optimization and backup of internal servers and databases</li>
+						<li>Evaluated new hardware and software to meet company requirements</li>
+						<li>Responsible for troubleshooting system (Windows, macOS) issues and providing solutions</li>
+						<li>Provided technical advice and assistance to office staff</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style lang='scss'>
+		.experience {
+			padding: 5rem 0;
+		}
+
+		.tabs {
+			padding: 0 1rem;
+
+			&__controls {
+				margin-top: 2rem;
+				cursor: pointer;
+			}
+
+			&__btn {
+				color: #8892b0;
+				background-color: transparent;
+				padding: 1rem 2rem;
+				border-bottom: 2px solid white;
+				margin: 0 -0.3rem;
+				font-size: 1.3rem;
+
+				&:hover {
+					background-color: #112240;
+				}
+
+				&.active {
+					color: #008afb;
+					background-color: #112240;
+					border-bottom: 2px solid #008afb;
+				}
+			}
+
+			&__tab {
+				display: none;
+				margin-top: 2rem;
+
+				a {
+					transition: border-bottom 1s;
+
+					&:hover {
+						border-bottom: 1px solid #008afb;
+					}
+				}
+
+				a,
+				span {
+					color: #008afb;
+				}
+
+				h3 {
+					padding: 0.7rem 0;
+					font-size: 2rem;
+					color: #ccd6f6;
+				}
+
+				li {
+					position: relative;
+					padding-left: 2rem;
+					margin: 1rem 0;
+					line-height: 1.4;
+					font-size: 1.6rem;
+
+					span {
+						margin-right: 1rem;
+						font-weight: bold;
+					}
+
+					&::before {
+						content: '>';
+						position: absolute;
+						left: 0px;
+						color: #008afb;
+						font-weight: bold;
+					}
+				}
+
+				&.active {
+					display: block;
+				}
+			}
+
+			&__range {
+				font-size: 1.3rem;
+			}
+
+			&__duties {
+				padding: 1.2rem 0;
+			}
+		}
+	</style>
+
+	<script>
+		const tabsBtns = document.querySelectorAll('.tabs__btn')
+		const tabsContents = document.querySelectorAll('.tabs__tab')
+
+		const toggleTab = e => {
+			const id = e.target.dataset.id
+			console.log(id)
+			if (id) {
+				tabsBtns.forEach(btn => {
+					btn.classList.remove('active')
+				})
+				e.target.classList.add('active')
+
+				tabsContents.forEach(content => {
+					content.classList.remove('active')
+				})
+				const element = document.getElementById(id)
+				element.classList.add('active')
+			}
+		}
+
+		tabsBtns.forEach(btn => btn.addEventListener('click', toggleTab))
+	</script>
+</section>

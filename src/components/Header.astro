@@ -6,13 +6,13 @@ import logo from '../images/logo.png'
 	<nav class='nav'>
 		<a href='#'><img class='nav__logo' src={logo} alt=' Logo Codecave' /></a>
 
-		<!-- <ol class='nav__list code'>
+		<ol class='nav__list code'>
 			<li class='nav__item'><a href='#about'><span>01.</span> About</a></li>
 			<li class='nav__item'><a href='#experience'><span>02.</span> Experience</a></li>
 			<li class='nav__item'><a href='#work'><span>03.</span> Work</a></li>
 			<li class='nav__item'><a href='#contact'><span>04.</span> Contact</a></li>
-			<li class='nav__item'><button><a href='#contact'>Resume</a></button></li>
-		</ol> -->
+			<!-- <li class='nav__item'><button><a href='#contact'>Resume</a></button></li> -->
+		</ol>
 
 		<button class='hamburger'>
 			<span class='hamburger__container'>
@@ -30,22 +30,40 @@ import logo from '../images/logo.png'
 		justify-content: space-between;
 		align-items: center;
 		height: 70px;
+
 		&__logo {
-			height: 60px;
+			height: 50px;
+			z-index: 5;
 		}
+
 		&__list {
+			position: fixed;
 			display: flex;
-			list-style: none;
-			font-size: 1.3rem;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			background-color: #0c1d2f;
+			transform: translateX(100%);
+			transition: transform 0.2s;
 		}
+
 		&__item {
+			margin: 2rem;
 			a {
 				padding: 1rem;
+				font-size: 1.6rem;
 				transition: color 0.1s;
 			}
+
 			a:hover {
 				color: #008afb;
 			}
+
 			span {
 				color: #008afb;
 				font-size: 1.2rem;
@@ -57,10 +75,11 @@ import logo from '../images/logo.png'
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 0.4rem;
 		width: 30px;
 		height: 30px;
-
 		background-color: transparent;
+		z-index: 10;
 
 		&__container {
 			position: relative;
@@ -92,7 +111,7 @@ import logo from '../images/logo.png'
 		&__bottom {
 			position: absolute;
 			width: 16px;
-			height: 2px;
+			height: 2.1px;
 			background-color: #008afb;
 			transition: transform 0.25s;
 		}
@@ -133,6 +152,7 @@ import logo from '../images/logo.png'
 		.hamburger__bottom {
 			transition: background-color 0.25s;
 		}
+
 		&:hover {
 			.hamburger__top {
 				background-color: #006dc7;
@@ -150,4 +170,55 @@ import logo from '../images/logo.png'
 			}
 		}
 	}
+
+	.show-nav {
+		transform: translateX(25%);
+	}
+
+	@media (min-width: 768px) {
+		.nav {
+			&__logo {
+				height: 70px;
+			}
+			&__list {
+				position: static;
+				flex-direction: row;
+				margin-bottom: 0.25rem;
+				background-color: transparent;
+				z-index: 0;
+				transform: none;
+			}
+		}
+
+		.hamburger {
+			display: none;
+		}
+	}
 </style>
+
+<script>
+	const nav = document.querySelector('.nav__list')
+	const navItems = document.querySelectorAll('.nav__item')
+	const hamburger = document.querySelector('.hamburger')
+	const main = document.querySelector('.main-page')
+
+	const toggleNav = () => {
+		if (nav.classList.contains('show-nav')) {
+			nav.classList.remove('show-nav')
+			hamburger.classList.remove('active')
+			document.body.classList.remove('fixed-body')
+			main.classList.remove('page-blur')
+		} else if (window.innerWidth < 992) {
+			nav.classList.add('show-nav')
+			hamburger.classList.add('active')
+			document.body.classList.add('fixed-body')
+			main.classList.add('page-blur')
+		}
+	}
+
+	hamburger.addEventListener('click', toggleNav)
+
+	navItems.forEach(function (navItem) {
+		navItem.addEventListener('click', toggleNav)
+	})
+</script>

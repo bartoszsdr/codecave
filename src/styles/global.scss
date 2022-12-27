@@ -3,6 +3,7 @@ $blue: #008afb;
 $dark-blue: #112240;
 $grey: #e3e3e3;
 $light-grey: #8892b0;
+$lighter-grey: #ccd6f6;
 
 *,
 *::after,
@@ -28,7 +29,7 @@ html {
 
 body {
 	font-family: 'Inter', sans-serif;
-	color: $grey;
+	color: $light-grey;
 	background-color: $dark;
 }
 
@@ -62,20 +63,25 @@ ol {
 	font-family: 'Fira Code', monospace;
 }
 
+.section-padding {
+	padding: 0 1rem;
+}
+
 .section-heading {
 	position: relative;
 	display: flex;
 	align-items: center;
 	width: 100%;
+	color: #ccd6f6;
 
 	h2 {
-		padding: 1rem;
-		font-size: 2rem;
+		margin-right: 1.6rem;
+		font-size: 2.2rem;
 	}
 
 	span {
 		color: $blue;
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 		font-family: 'Fira Code', monospace;
 	}
 
@@ -89,4 +95,12 @@ ol {
 		height: 1px;
 		background-color: $grey;
 	}
+}
+
+.fixed-body {
+	overflow: hidden;
+}
+
+.page-blur {
+	filter: blur(10px);
 }

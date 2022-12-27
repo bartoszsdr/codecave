@@ -14,8 +14,8 @@
 			Currently, I'm focused on building accessible, human-centered products while freelancing.
 		</p>
 	</div>
-	<div class='hero__button code'>
-		<a href='#'>Check out my projects</a>
+	<div>
+		<a class='hero__btn code' href='#projects'>See my projects</a>
 	</div>
 </section>
 
@@ -27,37 +27,43 @@
 		flex-direction: column;
 		min-height: 100vh;
 		height: 100vh;
-		padding: 0 1.5rem;
 		margin-top: -80px;
+
 		&__intro {
 			margin-bottom: 1rem;
 			color: #008afb;
 			font-size: 1.6rem;
 		}
+
 		&__heading {
 			color: #ccd6f6;
-			font-size: 3.3rem;
+			font-size: 3.2rem;
 		}
+
 		&__title {
 			margin-bottom: 3rem;
 			color: #8892b0;
-			font-size: 3.3rem;
+			font-size: 3.2rem;
 		}
+
 		&__description {
+			margin-bottom: 6rem;
 			color: #8892b0;
-			font-size: 1.5rem;
+			font-size: 1.6rem;
 		}
-		&__button {
+
+		&__btn {
+			padding: 1.75rem;
+			color: #008afb;
 			background-color: transparent;
 			border: 1px solid #008afb;
-			border-radius: 3px;
-			padding: 1.8rem 2rem;
-			font-size: 1rem;
-			line-height: 1;
-			margin-top: 50px;
-			font-size: 1.4rem;
-			a {
-				color: #008afb;
+			border-radius: 2px;
+			font-size: 1.6rem;
+			cursor: pointer;
+			transition: background-color 0.2s;
+
+			&:hover {
+				background-color: rgba(#008afb, 0.1);
 			}
 		}
 	}
