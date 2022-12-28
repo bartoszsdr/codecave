@@ -1,3 +1,7 @@
+---
+import '../styles/hero.scss'
+---
+
 <section class='hero'>
 	<div>
 		<p class='hero__intro code'>Hi, my name is</p>
@@ -18,68 +22,3 @@
 		<a class='hero__btn code' href='#projects'>See my projects</a>
 	</div>
 </section>
-
-<style lang='scss'>
-	.hero {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		flex-direction: column;
-		min-height: 100vh;
-		height: 100vh;
-		margin-top: -80px;
-
-		&__intro {
-			margin-bottom: 1rem;
-			color: #008afb;
-			font-size: 1.6rem;
-		}
-
-		&__heading {
-			color: #ccd6f6;
-			font-size: 3.2rem;
-		}
-
-		&__title {
-			margin-bottom: 3rem;
-			color: #8892b0;
-			font-size: 3.2rem;
-		}
-
-		&__description {
-			margin-bottom: 6rem;
-			color: #8892b0;
-			font-size: 1.6rem;
-		}
-
-		&__btn {
-			padding: 1.75rem;
-			color: #008afb;
-			background-color: transparent;
-			border: 1px solid #008afb;
-			border-radius: 2px;
-			font-size: 1.6rem;
-			cursor: pointer;
-			transition: background-color 0.2s;
-
-			&:hover {
-				background-color: rgba(#008afb, 0.1);
-			}
-		}
-	}
-
-	@media (min-width: 768px) {
-		.hero {
-			margin-top: -100px;
-
-			// margin: 0 100px;
-			// padding: 0 10rem;
-			&__heading {
-				font-size: 5rem;
-			}
-			&__title {
-				font-size: 5rem;
-			}
-		}
-	}
-</style>

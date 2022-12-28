@@ -7,18 +7,40 @@ import About from '../components/About.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
 import Contact from '../components/Contact.astro'
-
 import Footer from '../components/Footer.astro'
 ---
 
 <Layout title='Codecave'>
 	<Header />
 	<main class='main-page'>
-		<Hero />
-		<About />
-		<Experience />
-		<Projects />
-		<Contact />
+		<div class='wrapper'>
+			<Hero />
+			<About />
+			<Experience />
+			<Projects />
+			<Contact />
+		</div>
 	</main>
 	<Footer />
 </Layout>
+
+<style>
+	.wrapper {
+		margin: 0 auto;
+		padding: 0 2.2rem;
+		width: 100%;
+		max-width: 1400px;
+	}
+
+	@media (min-width: 768px) {
+		.wrapper {
+			padding: 0 8rem;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.wrapper {
+			padding: 0 16rem;
+		}
+	}
+</style>

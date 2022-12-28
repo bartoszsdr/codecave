@@ -1,3 +1,7 @@
+---
+import '../styles/footer.scss'
+---
+
 <footer class='footer'>
 	<div>
 		<ul class='footer__links'>
@@ -24,50 +28,3 @@
 	</div>
 	<div class='footer__copy'><a href='#'>designed & developed by <span>Codecave</span></a></div>
 </footer>
-
-<style lang='scss'>
-	.footer {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: 80px;
-
-		&__link {
-			margin: 1rem;
-
-			svg {
-				height: 20px;
-				transition: stroke 0.1s;
-
-				&:hover {
-					stroke: #008afb;
-				}
-			}
-		}
-
-		&__copy {
-			font-size: 0.8rem;
-
-			a {
-				color: #ccd6f6;
-			}
-
-			span {
-				transition: color 0.1s;
-			}
-
-			&:hover span {
-				color: #008afb;
-			}
-		}
-	}
-
-	@media (min-width: 768px) {
-		.footer {
-			&__copy {
-				font-size: 1rem;
-			}
-		}
-	}
-</style>

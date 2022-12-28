@@ -1,3 +1,7 @@
+---
+import '../styles/projects.scss'
+---
+
 <section id='projects' class='projects section-padding'>
 	<div class='section-heading'>
 		<h2><span>03.</span> Some Things I've Built</h2>
@@ -36,7 +40,7 @@
 								height='24'
 								viewBox='0 0 24 24'
 								fill='none'
-								stroke='#fff'
+								stroke='#ccd6f6'
 								stroke-width='2'
 								stroke-linecap='round'
 								stroke-linejoin='round'
@@ -57,7 +61,7 @@
 								height='24'
 								viewBox='0 0 24 24'
 								fill='none'
-								stroke='#fff'
+								stroke='#ccd6f6'
 								stroke-width='2'
 								stroke-linecap='round'
 								stroke-linejoin='round'
@@ -99,7 +103,7 @@
 								height='24'
 								viewBox='0 0 24 24'
 								fill='none'
-								stroke='#fff'
+								stroke='#ccd6f6'
 								stroke-width='2'
 								stroke-linecap='round'
 								stroke-linejoin='round'
@@ -116,7 +120,7 @@
 								height='24'
 								viewBox='0 0 24 24'
 								fill='none'
-								stroke='#fff'
+								stroke='#ccd6f6'
 								stroke-width='2'
 								stroke-linecap='round'
 								stroke-linejoin='round'
@@ -131,82 +135,3 @@
 		</li>
 	</ul>
 </section>
-
-<style lang='scss'>
-	.projects {
-		&__list {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-		}
-
-		&__card {
-			margin-bottom: 2rem;
-			padding: 2rem;
-			background-color: rgba($color: #008afb, $alpha: 0.05);
-			border-radius: 5px;
-		}
-
-		&__featured {
-			margin-bottom: 0.4rem;
-			color: #008afb;
-			font-size: 1.3rem;
-		}
-
-		&__title {
-			margin-bottom: 2rem;
-			font-size: 2rem;
-
-			a {
-				transition: color 0.2s;
-			}
-
-			a:hover {
-				color: #008afb;
-			}
-		}
-
-		&__description {
-			margin-bottom: 2rem;
-			font-size: 1.6rem;
-			line-height: 1.4;
-		}
-
-		&__technology {
-			display: flex;
-			margin-bottom: 2rem;
-			font-size: 1.2rem;
-
-			li {
-				margin-right: 1rem;
-			}
-		}
-
-		&__links {
-			svg {
-				transition: stroke 0.1s;
-			}
-
-			a {
-				margin-right: 1rem;
-
-				&:hover {
-					svg {
-						stroke: #008afb;
-					}
-				}
-			}
-
-			svg {
-				height: 19px;
-			}
-		}
-
-		&__links a:last-child {
-			svg {
-				height: 21px;
-			}
-		}
-	}
-</style>
