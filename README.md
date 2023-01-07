@@ -1,15 +1,12 @@
-<p align="center"><img align="center" width="300" src="https://i.imgur.com/dmDpFP1.png"/></p>
-<h3 align="center">CODECAVE</h3>
-<hr>
+<h1 align="center">
+  <img alt="Codecave logo" src="https://i.imgur.com/dmDpFP1.png" width="250px"/><br/><br/>
+  Personal website and portfolio build with Astro.
+</h1>
 
-# Tools
+## ⚡️ Technology
 
 - [Astro](https://astro.build)
+- [SASS](https://sass-lang.com)
 
-# Description
-
-# Preview
-
-<p align="center"></p>
-<br><br>
-<p align="center">Made with ❤️ and JavaScript.</p>
+## 🔍 Preview
+<p align="left"><img align="center" width="1100" src="https://i.imgur.com/O3KPKsz.png"/></p>
